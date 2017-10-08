@@ -11,4 +11,7 @@ I have a backend API that I need to communicate with and it's not RESTful, nor c
 ## Observations and choices (incomplete)
 I noticed that the calls requiring data from a separate call are never cacheable, so I used that knowledge to create middleware that also "knew" it; meaning, the middleware doesn't perform validation and uses the action type or the presence of a particular property to indiscriminately decide what to do. I also opted to violate the standard action spec (see https://github.com/acdlite/flux-standard-action) in favor of conveniently adding properties that made my life easier.
 
+## Other notes
+I have studied much of the middleware out there but none of it completely meets my needs so I'm designing my own. That being said, I have undoubtedly written (or will write) some code that rips off someone else's idea. This is completely unintentional and I will make my best effort to credit those from whom I stole ideas. If you see anything in this repo as time goes on that is not original and deserves credit, please please please let me know.
+
 I'll continue to update this as I progress and I hope someone finds value in it, even if that value is simply knowledge of what not to do. Considering my use-case and the fact that I can't use proprietary information, it may seem pretty bland, but I'll do my best to add tests and examples as I complete various pieces.
